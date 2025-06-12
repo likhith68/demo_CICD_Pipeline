@@ -10,7 +10,7 @@ export class LambdaStack extends cdk.Stack {
 
         // Create a Lambda function with inline code
         const demoLambda = new lambda.Function(this, 'demoLambdaLogicalID', {
-            runtime: lambda.Runtime.NODEJS_14_X,
+            runtime: lambda.Runtime.NODEJS_22_X,
             handler: 'index.handler',
             code: lambda.Code.fromInline('exports.handler = _ => "Hello CDK from Lambda - Likhith";'),
         });
